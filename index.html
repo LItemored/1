@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friseur in Musterstadt | Haarstudio Linde (Demo)</title>
+<meta name="description" content="Friseur in Musterstadt: Schneiden, Balayage, Haarverlängerung und Styling für besondere Anlässe. Jetzt Termin online buchen.">
+<meta name="theme-color" content="#f7f1ea">
+<meta property="og:title" content="Friseur in Musterstadt | Haarstudio Linde">
+<meta property="og:description" content="Schneiden, Balayage, Haarverlängerung und Styling für besondere Anlässe. Jetzt online Termin buchen.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%23a8553a'/%3E%3Ctext x='50' y='66' font-size='52' text-anchor='middle' fill='white' font-family='Georgia'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f1ea; --bg-alt: #efe4d8; --text: #2b2420; --muted: #6f625a;
+    --accent: #a8553a; --accent-dark: #8a432c; --card: #fffaf5; --radius: 16px;
+    --font-head: "Cormorant Garamond", Georgia, serif;
+    --font-body: "Inter", system-ui, sans-serif;
+    --s1: 8px; --s2: 16px; --s3: 24px; --s4: 40px; --s5: 72px; --s6: 112px;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--bg); color: var(--text); line-height: 1.7; font-size: 17px; padding-bottom: 76px; }
+  .skip { position: absolute; left: -999px; top: 8px; background: var(--text); color: #fff; padding: 10px 16px; border-radius: 8px; z-index: 20; }
+  .skip:focus { left: 8px; }
+  a:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .btn { transition: none; } .btn:hover { transform: none; } }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 var(--s3); }
+  section { padding: var(--s5) 0; }
+  .alt { background: var(--bg-alt); }
+  h1, h2, h3 { font-family: var(--font-head); font-weight: 600; line-height: 1.1; }
+  h1 { font-size: clamp(2.6rem, 7vw, 4.4rem); letter-spacing: -0.01em; }
+  h2 { font-size: clamp(2rem, 4.5vw, 2.8rem); margin-bottom: var(--s4); }
+  h3 { font-size: 1.5rem; margin-bottom: var(--s1); }
+  .muted { color: var(--muted); }
+  .eyebrow { text-transform: uppercase; letter-spacing: .14em; font-size: .78rem; font-weight: 600; color: var(--accent-dark); margin-bottom: var(--s2); }
+
+  .btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 16px 32px; border-radius: 999px; font-weight: 600; transition: background .2s, transform .2s; }
+  .btn:hover { background: var(--accent-dark); transform: translateY(-2px); }
+  .btn.ghost { background: transparent; color: var(--text); border: 1.5px solid var(--text); }
+  .btn.ghost:hover { background: var(--text); color: #fff; }
+
+  nav { display: flex; justify-content: space-between; align-items: center; padding: var(--s2) var(--s3); max-width: 1040px; margin: 0 auto; }
+  nav .logo { font-family: var(--font-head); font-size: 1.5rem; font-weight: 600; }
+  nav .btn { padding: 10px 22px; font-size: .92rem; }
+
+  .hero { padding: var(--s5) 0 var(--s6); }
+  .hero .wrap { display: grid; gap: var(--s4); align-items: center; }
+  .hero .lead { font-size: 1.15rem; color: var(--muted); max-width: 480px; margin: var(--s3) 0 var(--s4); }
+  .actions { display: flex; flex-wrap: wrap; gap: var(--s2); }
+  .trust { margin-top: var(--s3); font-size: .9rem; color: var(--muted); }
+  .hero-img { aspect-ratio: 4/5; border-radius: 200px 200px var(--radius) var(--radius); background: linear-gradient(160deg, #d9b9a3, #b98468); display: grid; place-items: center; color: rgba(255,255,255,.9); font-size: .9rem; text-align: center; padding: var(--s3); }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: var(--s3); }
+  .card { background: var(--card); padding: var(--s4) var(--s3); border-radius: var(--radius); box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 12px 30px -18px rgba(60,35,20,.35); }
+  .card p { color: var(--muted); font-size: .98rem; }
+  .card .more { display: inline-block; margin-top: var(--s2); color: var(--accent-dark); font-weight: 600; font-size: .92rem; text-decoration: none; }
+
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--s4); }
+  .step .num { font-family: var(--font-head); font-size: 3.4rem; color: var(--accent); line-height: 1; }
+
+  .about { display: grid; gap: var(--s4); align-items: center; }
+  .about .portrait { aspect-ratio: 1; border-radius: var(--radius); background: #d8c8ba; display: grid; place-items: center; color: var(--muted); font-size: .9rem; text-align: center; padding: var(--s3); }
+  .about p + p { margin-top: var(--s2); }
+
+  .proof { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s2); }
+  .ph { aspect-ratio: 4/3; border-radius: var(--radius); background: #d8c8ba; display: grid; place-items: center; color: var(--muted); font-size: .9rem; }
+  .quote { margin-top: var(--s4); font-family: var(--font-head); font-size: 1.6rem; line-height: 1.35; max-width: 640px; }
+  .quote small { display: block; margin-top: var(--s1); font-family: var(--font-body); font-size: .9rem; color: var(--muted); }
+
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--s3); margin-top: var(--s4); }
+  .facts div { border-top: 2px solid var(--accent); padding-top: var(--s2); }
+  .facts b { display: block; margin-bottom: 4px; }
+
+  .cta { background: var(--text); color: #fff; text-align: center; }
+  .cta h2 { margin-bottom: var(--s2); }
+  .cta p { color: rgba(255,255,255,.75); margin-bottom: var(--s4); }
+  .cta .actions { justify-content: center; }
+  .cta .btn.ghost { color: #fff; border-color: rgba(255,255,255,.6); }
+  .cta .btn.ghost:hover { background: #fff; color: var(--text); }
+
+  footer { text-align: center; padding: var(--s4) var(--s3); font-size: .85rem; color: var(--muted); }
+
+  /* Feste Leiste am Handy: Anrufen + Termin immer erreichbar */
+  .bar { position: fixed; left: 0; right: 0; bottom: 0; display: flex; gap: 8px; padding: 10px 12px; background: rgba(247,241,234,.96); backdrop-filter: blur(8px); border-top: 1px solid rgba(0,0,0,.08); z-index: 10; }
+  .bar a { flex: 1; text-align: center; padding: 13px 8px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: .95rem; }
+  .bar .call { border: 1.5px solid var(--text); color: var(--text); }
+  .bar .book { background: var(--accent); color: #fff; }
+
+  @media (min-width: 800px) {
+    .hero .wrap { grid-template-columns: 1.1fr .9fr; }
+    .about { grid-template-columns: .8fr 1.2fr; }
+    section { padding: var(--s6) 0; }
+    .bar { display: none; }
+    body { padding-bottom: 0; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#leistungen">Zum Inhalt springen</a>
+
+<nav>
+  <span class="logo">Haarstudio Linde</span>
+  <a class="btn" href="#termin">Termin buchen</a>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Friseur in Musterstadt</p>
+      <h1>Haare, in denen du dich wohlfühlst.</h1>
+      <p class="lead">Schneiden, Färben, Balayage und Styling für jeden Anlass. In ruhiger, gemütlicher Atmosphäre und mit Beratung, die zu dir passt.</p>
+      <div class="actions">
+        <a class="btn" href="#termin">Jetzt Termin online buchen</a>
+        <a class="btn ghost" href="#leistungen">Leistungen ansehen</a>
+      </div>
+      <p class="trust">Zahlung bar oder mit Karte · Parkplätze direkt vor der Tür</p>
+    </div>
+    <div class="hero-img" role="img" aria-label="Platzhalter für Salonfoto">Platzhalter: Foto vom Salon oder der Inhaberin bei der Arbeit</div>
+  </div>
+</header>
+
+<main>
+
+<section class="alt" id="leistungen">
+  <div class="wrap">
+    <p class="eyebrow">Leistungen</p>
+    <h2>Was ich für dich tun kann</h2>
+    <div class="cards">
+      <div class="card"><h3>Schneiden &amp; Styling</h3><p>Waschen, Schneiden, Föhnen für Damen, dazu Styling für Herren, immer mit Beratung zu deinem Typ.</p></div>
+      <div class="card"><h3>Balayage</h3><p>Natürliche Farbverläufe, die weich auswachsen und lange schön bleiben.</p><a class="more" href="#leistungen">Mehr zu Balayage</a></div>
+      <div class="card"><h3>Besondere Anlässe</h3><p>Hochzeit, Abiball oder Feier: Ich berate dich zu Frisur und Styling für deinen großen Tag.</p><a class="more" href="#leistungen">Mehr erfahren</a></div>
+      <div class="card"><h3>Haarverlängerung</h3><p>Mehr Länge und Fülle, die sich natürlich anfühlt.</p><a class="more" href="#leistungen">Mehr erfahren</a></div>
+      <div class="card"><h3>Wimpernwelle</h3><p>Schwungvolle Wimpern ohne täglichen Aufwand.</p><a class="more" href="#leistungen">Mehr erfahren</a></div>
+      <div class="card"><h3>Natürliche Techniken</h3><p>Schonende Methoden und Produkte für gesundes Haar.</p><a class="more" href="#leistungen">Mehr erfahren</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Ablauf</p>
+    <h2>So einfach geht's</h2>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h3>Termin online wählen</h3><p class="muted">Rund um die Uhr in einer Minute. Passt kein Termin, ruf an oder schreib per WhatsApp.</p></div>
+      <div class="step"><div class="num">2</div><h3>Beratung im Salon</h3><p class="muted">Wir besprechen, was zu dir, deinem Haar und deinem Alltag passt.</p></div>
+      <div class="step"><div class="num">3</div><h3>Zufrieden nach Hause</h3><p class="muted">Mit Pflegetipps, damit das Ergebnis lange hält.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap about">
+    <div class="portrait" role="img" aria-label="Platzhalter für Porträtfoto">Platzhalter: Porträtfoto der Inhaberin</div>
+    <div>
+      <p class="eyebrow">Über mich</p>
+      <h2 style="margin-bottom: var(--s3)">Hallo, ich bin Anna.</h2>
+      <p>In meinem Salon in Musterstadt nehme ich mir Zeit für dich. Hier kommt ein kurzer, persönlicher Text hin: seit wann sie Friseurin ist, was ihr wichtig ist, was Kundinnen an ihr schätzen.</p>
+      <p class="muted">Diesen Text schreibst du später mit dem Betrieb zusammen. Nichts erfinden, was nicht stimmt.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Ergebnisse</p>
+    <h2>Vorher &amp; Nachher</h2>
+    <div class="proof">
+      <div class="ph" role="img" aria-label="Platzhalter Foto vorher">Foto vorher</div>
+      <div class="ph" role="img" aria-label="Platzhalter Foto nachher">Foto nachher</div>
+    </div>
+    <blockquote class="quote">„Hier kommt eine echte Kundenstimme hin, mit Erlaubnis der Kundin.“
+      <small>Name, Kundin</small>
+    </blockquote>
+  </div>
+</section>
+
+<section class="alt" id="termin">
+  <div class="wrap">
+    <p class="eyebrow">Kontakt</p>
+    <h2 style="margin-bottom: var(--s3)">Dein Termin in Musterstadt</h2>
+    <p class="muted" style="max-width:560px">Buch online oder melde dich direkt, wenn kein passender Termin dabei ist.</p>
+    <div class="facts">
+      <div><b>Telefon / WhatsApp</b><a href="tel:+490000000000" style="color:inherit">0000 000000</a></div>
+      <div><b>Salon</b>Musterstadt (Adresse hier eintragen)</div>
+      <div><b>Öffnungszeiten</b>Hier eintragen</div>
+      <div><b>Zahlung</b>Bar oder Karte</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <h2>Bereit für deinen Termin?</h2>
+    <p>Online buchen dauert eine Minute.</p>
+    <div class="actions">
+      <a class="btn" href="#termin">Jetzt Termin buchen</a>
+      <a class="btn ghost" href="tel:+490000000000">Anrufen</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>Demo-Seite mit fiktivem Salon, erstellt als Portfolio-Beispiel</footer>
+
+<div class="bar">
+  <a class="call" href="tel:+490000000000">Anrufen</a>
+  <a class="book" href="#termin">Termin buchen</a>
+</div>
+
+</body>
+</html>
